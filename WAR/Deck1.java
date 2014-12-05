@@ -34,21 +34,15 @@ public class Deck1
    public void freshDeck()
    {
       deck = new ArrayList<Card>();
-
-      for(int a=0; a<=3; a++)
-        {
-            for(int b =0; b<=12;b++)
-            {
-                deck.add(new Card(a,b));
-            }
-        } 
-      // for (int r = Card.ACE; r<=Card.KING;r++)
-//       {
-//          for (int s=Card.SPADES;s<=Card.CLUBS;s++)
-//          {
-//            deck.add(new Card(r,s));
-//          }
-//       }
+ 
+      for (int s=Card.SPADES;s<=Card.CLUBS;s++)
+      {
+         for (int r = Card.ACE; r<=Card.KING;r++)
+         {
+           Card card = new Card(s,r);
+           deck.add(card);
+         }
+      }
      
    
    }
@@ -70,6 +64,18 @@ public class Deck1
    {  
       return deck.size();
    }
+   /**
+     *Print all the cards in the deck
+     *
+     */
+   public void printAll()
+   {
+      for (int i = 0; i < deck.size(); i++)
+      {
+         System.out.println(deck.get(i).cardPic());
+      }
+   }
+   
    /** 
      * Randomize the order of Cards in Deck
      */
@@ -94,22 +100,12 @@ public class Deck1
    
    public boolean isEmpty()
    {
-      return (deck.size() == 0);   
-
-   }
-   public static Card highCard(Card...cards)
-   {
-   
-      Card high = cards[0];
-      for (int i=1;i<cards.length;i++)
+      boolean empty = false;
+      if(deck.size()==0)
       {
-         if (cards[i].getRank() > high.getRank())
-         {
-         
-            high = cards[i];
-         }
+         empty = true;
       }
-      return high;
-   
+      return empty;  
+
    }
 }

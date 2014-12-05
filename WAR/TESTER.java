@@ -10,7 +10,6 @@ public class TESTER
       frame.setSize(1500,300);
       frame.validate();
       frame.setVisible(true);
-      
      
    }
 }

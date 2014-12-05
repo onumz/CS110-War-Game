@@ -36,7 +36,7 @@ public class Card
          {rank = newRank;}
       
    }
-   
+   //Copy Constructor
    public Card(Card otherCard)
    {
       int newRank = otherCard.rank;
@@ -53,7 +53,8 @@ public class Card
       else 
          {rank = newRank;}
    }
-   
+   //Get the file name for the card picture
+   //@return String representing filename
    public String cardPic()
    {
       //Use if/else statement to make string value of rank   
@@ -98,6 +99,8 @@ public class Card
       return rank;
    }
    
+   //Method to return the image icon
+   //@return icon an ImageIcon object
    public ImageIcon getIcon()
    {
       return icon;
