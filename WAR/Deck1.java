@@ -35,13 +35,20 @@ public class Deck1
    {
       deck = new ArrayList<Card>();
 
-      for (int r = Card.ACE; r<=Card.KING;r++)
-      {
-         for (int s=Card.SPADES;s<=Card.CLUBS;s++)
-         {
-           deck.add(new Card(r,s));
-         }
-      }
+      for(int a=0; a<=3; a++)
+        {
+            for(int b =0; b<=12;b++)
+            {
+                deck.add(new Card(a,b));
+            }
+        } 
+      // for (int r = Card.ACE; r<=Card.KING;r++)
+//       {
+//          for (int s=Card.SPADES;s<=Card.CLUBS;s++)
+//          {
+//            deck.add(new Card(r,s));
+//          }
+//       }
      
    
    }

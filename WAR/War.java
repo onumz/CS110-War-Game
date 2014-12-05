@@ -124,7 +124,7 @@ public class War
       {
          empty = true;
       }
-      return true;
+      return false;
    }
    
    public boolean compIsEmpty()
@@ -134,7 +134,7 @@ public class War
       {
          empty = true;
       }
-      return true;
+      return false;
    }
    
    public int userDeckSize()
